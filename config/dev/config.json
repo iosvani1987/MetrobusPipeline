@@ -4,5 +4,15 @@
     "root_path": "./",
     "transform_path": "./transform/",
     "extract_path": "./extract/",
-    "load_path": "./load/"
+    "load_path": "./load/",
+    "columns_dataframe": ["date_updated", "vehicle_id", "vehicle_label", "vehicle_current_status",
+        "position_latitude", "position_longitude", "geographic_point",
+        "position_speed", "position_odometer", "trip_schedule_relationship",
+        "trip_id", "trip_start_date", "trip_route_id"],
+    "api_position_stack": {
+        "host": "http://api.positionstack.com/v1/reverse?",
+        "key": "c01d03de7a4872518e17068cca4b94be"
+    },
+    "filter_columns": ["vehicle_id", "vehicle_label", "vehicle_current_status", 
+        "position_latitude","position_longitude", "county"]
 }
