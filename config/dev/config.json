@@ -1,0 +1,5 @@
+{
+    "geo_api": "http://api.positionstack.com/v1/reverse?",
+    "access_key": "c01d03de7a4872518e17068cca4b94be",
+    "extract_saved_path": "./transform/"
+}
