@@ -17,9 +17,12 @@ def _extract(file_name):
     This function extracts the data from the source.
     """
     logger.info('Extracting data')
+    # Verify if the file exists
     extract = Extract(file_name)
     extract.from_csv()
-    extract.save_to_csv(config.get_config('saved_path') +'extracted_' + file_name)
+
+    #Moving file to the transformed folder
+    _move_file(config.get_config('root_path') + file_name, config.get_config('transform_path') + file_name)
     logger.info('Extracting data finished')
 
 """
@@ -66,5 +69,4 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Input the filename path')
     parser.add_argument('file_name', help='The input file.', type=str)
     args = parser.parse_args()
-    print(config.get_config('saved_path'))
     main(args.file_name)
