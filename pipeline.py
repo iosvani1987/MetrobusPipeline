@@ -7,11 +7,13 @@ from config.config import Configuration
 
 from extract.extract import Extract
 from transform.transform import Transform
+from load.load import Load
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-config = Configuration(os.environ['APP_ENVIROMENT'],'config')
+# config = Configuration(os.environ['APP_ENVIROMENT'],'config')
+config = Configuration('dev','config')
 
 def _extract(file_name):
     """
@@ -61,6 +63,13 @@ def _transform(file_name):
 
     logger.info('Transform process finished')
 
+def _load(file_name):
+    logger.info('Starting load process')
+    load = Load(config.get_config('load_path') + file_name)
+    load.save_to_db()
+    _remove_file(config.get_config('load_path'), file_name)
+    logger.info('Load process finished')
+
 
 """
 This is the Auxiliary functions.
@@ -94,8 +103,9 @@ def main(file_name):
     """
     try:
         logger.info('Starting ETL process')
-        _extract(file_name)
-        _transform(file_name)
+        # _extract(file_name)
+        # _transform(file_name)
+        _load("clean_" + file_name)
         logger.info('ETL process finished')
     except FileNotFoundError as err:
         logger.warning(str(err))

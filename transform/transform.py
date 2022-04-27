@@ -10,7 +10,8 @@ from config.config import Configuration
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-config = Configuration(os.environ['APP_ENVIROMENT'],'config')
+# config = Configuration(os.environ['APP_ENVIROMENT'],'config')
+config = Configuration('dev','config')
 
 class Transform():
     """
@@ -129,7 +130,8 @@ class Transform():
         """
             This function is used to filter the data frame by column.
         """
-        self.data_frame = self.data_frame[config.get_config('columns_dataframe')]
+        self.data_frame = self.data_frame[config.get_config('filter_columns')]
+        print(self.data_frame.columns)
         return self.data_frame
 
     def save_data_frame_to_csv(self, file_name: str) -> Boolean:
