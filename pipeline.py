@@ -67,7 +67,7 @@ def _load(file_name):
     logger.info('Starting load process')
     load = Load(config.get_config('load_path') + file_name)
     load.save_to_db()
-    _remove_file(config.get_config('load_path'), file_name)
+    # _remove_file(config.get_config('load_path'), file_name)
     logger.info('Load process finished')
 
 

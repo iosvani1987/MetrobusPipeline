@@ -6,3 +6,5 @@ cryptography==36.0.2
 mysql-connector
 mysql-connector-python
 mysqlclient
+pytest
+datatest
