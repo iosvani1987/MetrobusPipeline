@@ -19,7 +19,11 @@ consulted through an API Rest filtering by unit or by mayor's office.
   docker-compose up
   ```
 4. Execute a command in a running container ``` docker-compose exec backend bash``` to execute the data pipeline
-with the command ``` python pipeline.py <path to input csv> ```
+with the command 
+``` 
+  cd etl/
+  python pipeline.py <path to input csv> 
+```
 
 # API
 1.  Get a list of available units
