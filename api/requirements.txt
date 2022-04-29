@@ -1,0 +1,7 @@
+Flask==2.1.0
+Flask-MySQLdb==1.0.1
+mysql-connector==2.2.9
+mysql-connector-python==8.0.29
+mysqlclient==2.1.0
+pytest==5.3.5
+PyMySQL==0.10.0
