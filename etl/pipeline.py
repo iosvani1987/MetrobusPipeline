@@ -103,8 +103,8 @@ def main(file_name):
     """
     try:
         logger.info('Starting ETL process')
-        # _extract(file_name)
-        # _transform(file_name)
+        _extract(file_name)
+        _transform(file_name)
         _load("clean_" + file_name)
         logger.info('ETL process finished')
     except FileNotFoundError as err:

@@ -111,6 +111,8 @@ class Transform():
         url = config.get_config('api_position_stack')['host']
         url = url + "access_key=" + config.get_config('api_position_stack')['key']
         url = url + "&query=" + str(position) + "&limit=1"
+        
+        logger.info(f'Getting county name from api: {url}')
         response = requests.get(url)
         if response.status_code == 200:
             return response.json().get("data")[0].get("county")
