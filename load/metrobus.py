@@ -4,7 +4,7 @@ from .base import Base
 
 
 class Metrobus(Base):
-    __tablename__ = 'metrobus_metrobus'
+    __tablename__ = 'metrobus'
 
     vehicle_id = Column(Integer, primary_key=True, unique=True)
     vehicle_label = Column(Integer)

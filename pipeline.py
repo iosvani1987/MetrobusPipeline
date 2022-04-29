@@ -12,8 +12,8 @@ from load.load import Load
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# config = Configuration(os.environ['APP_ENVIROMENT'],'config')
-config = Configuration('dev','config')
+config = Configuration(os.environ['APP_ENVIROMENT'],'config')
+# config = Configuration('dev','config')
 
 def _extract(file_name):
     """
