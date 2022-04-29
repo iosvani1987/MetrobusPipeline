@@ -10,7 +10,7 @@ consulted through an API Rest filtering by unit or by mayor's office.
 1. Clone the project
   ```
   git clone https://github.com/iosvani1987/MetrobusPipeline.git
-```
+  ```
 2. Install docker to implifies the process of managing application processes in containers
   *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04*
 
@@ -42,7 +42,4 @@ with the command ``` python pipeline.py <path to input csv> ```
   ``` 
     https://localhost:5000/metrobuses/<int:vehicle_id>
   ```
-
-  
-  
   

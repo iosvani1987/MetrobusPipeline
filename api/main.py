@@ -93,6 +93,18 @@ def get_metrobuses_by_vehicle_id(vehicle_id = None):
     rv = cur.fetchall()
     return jsonify({"data": rv})
 
+@app.route('/metrobuses/location/<int:vehicle_id>', methods=['GET'])
+def get_metrobus_location(vehicle_id):
+    """
+        This Endpoint is used to get the metrobuses location by vehicle_id.
+            https://localhost:5000/metrobuses/location/<vehicle_id>
+            This route just admits the vehicle_id as integer parameter.
+    """
+    cur = mysql.connection.cursor()
+    cur.execute('''SELECT position_latitude, position_latitude, county FROM metrobus WHERE vehicle_id = %s''', (vehicle_id,))
+    rv = cur.fetchall()
+    return jsonify({"data": rv})
+
 
 # @app.route('/metrobuses/county', methods=['GET'])
 # def get_available_county():
