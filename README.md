@@ -1,10 +1,7 @@
 # Metrobus Pipeline
 
 # Description
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/pipeline_metrobus
 Develop a data analysis pipeline using Mexico City's open data corresponding to the locations of the metrobus 
 units corresponding to the locations of the Metrobus units so that it can be consulted through an API Rest 
 consulted through an API Rest filtering by unit or by mayor's office.
@@ -13,7 +10,7 @@ consulted through an API Rest filtering by unit or by mayor's office.
 1. Clone the project
   ```
   git clone https://github.com/iosvani1987/MetrobusPipeline.git
-```
+  ```
 2. Install docker to implifies the process of managing application processes in containers
   *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-compose-on-ubuntu-20-04*
 
