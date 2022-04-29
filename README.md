@@ -1,7 +1,10 @@
 # Metrobus Pipeline
 
 # Description
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/pipeline_metrobus
 Develop a data analysis pipeline using Mexico City's open data corresponding to the locations of the metrobus 
 units corresponding to the locations of the Metrobus units so that it can be consulted through an API Rest 
 consulted through an API Rest filtering by unit or by mayor's office.
@@ -42,3 +45,4 @@ with the command ``` python pipeline.py <path to input csv> ```
   ``` 
     https://localhost:5000/metrobuses/<int:vehicle_id>
   ```
+  
