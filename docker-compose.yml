@@ -1,11 +1,11 @@
 version: '3.9'
 services:
   backend:
-    build: .
+    build: ./etl
     stdin_open: true
     tty: true
     volumes:
-      - .:/app
+      - .:/etl
     depends_on:
       - db
 
@@ -21,3 +21,14 @@ services:
       - .dbdata:/var/lib/mysql
     ports:
       - 33066:3306
+
+  api:
+    build: ./api
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/api
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
