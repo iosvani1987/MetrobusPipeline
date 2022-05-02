@@ -101,7 +101,7 @@ def get_metrobus_location(vehicle_id):
             This route just admits the vehicle_id as integer parameter.
     """
     cur = mysql.connection.cursor()
-    cur.execute('''SELECT position_latitude, position_latitude, county FROM metrobus WHERE vehicle_id = %s''', (vehicle_id,))
+    cur.execute('''SELECT vehicle_id, position_latitude, position_longitude, county FROM metrobus WHERE vehicle_id = %s''', (vehicle_id,))
     rv = cur.fetchall()
     return jsonify({"data": rv})
 
