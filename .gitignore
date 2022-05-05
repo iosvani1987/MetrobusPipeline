@@ -2,3 +2,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
+.dbdata/*
+.pytest_cache/
+etl/.~lock.prueba_fetchdata_metrobus.csv#
+etl/load/.~lock.clean_prueba_fetchdata_metrobus.csv#
